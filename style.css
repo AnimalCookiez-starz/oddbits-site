@@ -1,0 +1,48 @@
+:root {
+  --blue: #0033AA;
+  --deep: #00227A;
+  --cream: #FFF3DC;
+  --tangerine: #FF6A2B;
+  --ink: #0B1B4D;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  background: var(--blue);
+  color: var(--cream);
+  line-height: 1.5;
+}
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--tangerine); outline-offset: 3px; border-radius: 4px; }
+
+/* Home */
+.home { min-height: 100vh; display: flex; flex-direction: column; padding: 48px 20px 28px; }
+.hero { flex: 1; max-width: 640px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+.hero img { width: 112px; height: 112px; border-radius: 50%; }
+.wordmark { margin: 0; font-size: clamp(64px, 16vw, 128px); font-weight: 800; line-height: 0.9; letter-spacing: -0.035em; }
+.dotless { position: relative; display: inline-block; }
+.dotless::after {
+  content: ""; position: absolute; left: 50%; top: 0.02em; width: 0.2em; height: 0.2em; margin-left: -0.1em;
+  background: var(--tangerine); border-radius: 0.045em; transform: rotate(22deg);
+}
+.tagline { margin: 0; font-size: clamp(22px, 5vw, 30px); font-weight: 500; opacity: 0.85; }
+.about { margin: 0; max-width: 34em; font-size: 18px; opacity: 0.8; }
+.links { display: flex; flex-wrap: wrap; gap: 12px; padding: 0; margin: 0; list-style: none; }
+.links a {
+  display: inline-block; padding: 12px 20px; border-radius: 14px; background: var(--cream); color: var(--blue);
+  font-weight: 800; text-decoration: none; font-size: 18px;
+}
+.links a:hover { background: #fff; }
+.footer { max-width: 640px; margin: 40px auto 0; width: 100%; font-size: 15px; opacity: 0.7; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+/* Text pages */
+.page { background: var(--cream); color: var(--ink); min-height: 100vh; }
+.page header { background: var(--blue); color: var(--cream); padding: 20px; }
+.page header a { font-weight: 800; font-size: 22px; text-decoration: none; letter-spacing: -0.02em; }
+.page main { max-width: 680px; margin: 0 auto; padding: 40px 20px 64px; }
+.page h1 { font-size: clamp(34px, 8vw, 48px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 8px; }
+.page h2 { font-size: 22px; margin: 36px 0 8px; }
+.page p, .page li { font-size: 17px; }
+.page .meta { opacity: 0.7; margin: 0 0 24px; }
